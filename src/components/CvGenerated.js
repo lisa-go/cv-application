@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
-function CvGenerated () {
+function CvGenerated (props) {
 
     return (
         <div id="CV">
-            <div className="CVname">this.state.fullname</div>
+            <div className="CVname">{props.genInfo}</div>
+           
+            
         </div>
     )
   
