@@ -1,13 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import AddBtn from "./AddBtn";
 import DeleteBtn from "./DeleteBtn";
 
-class WorkInfo extends Component {
-  constructor() {
-    super()
-  }
+function WorkInfo () {
 
-  render() {
     return (
         <div className="part">
             <h1>Work Experience</h1>
@@ -47,7 +43,7 @@ class WorkInfo extends Component {
             </section>
         </div> 
     )
-  }
+  
 }
 
 export default WorkInfo;

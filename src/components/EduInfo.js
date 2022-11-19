@@ -1,13 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import AddBtn from "./AddBtn";
 import DeleteBtn from "./DeleteBtn";
 
-class EduInfo extends Component {
-  constructor() {
-    super()
-  }
-
-  render() {
+function EduInfo () {
     return (
         <div className="part">
             <h1>Education Information</h1>
@@ -52,7 +47,7 @@ class EduInfo extends Component {
             </section> 
         </div>
     )
-  }
+  
 }
 
 export default EduInfo;

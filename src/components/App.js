@@ -1,18 +1,13 @@
-import React, { Component, useState } from "react";
+import React from "react";
 import EduInfo from "./EduInfo";
 import WorkInfo from "./WorkInfo";
 import GenInfo from "./GenInfo";
 import CvGenerated from "./CvGenerated";
 import Header from "./Header";
 
-class App extends Component {
-    constructor() {
-        super()
-    }
+function App () {
 
-
-    render() {
-        return (
+    return (
             <div id="body">
                 <Header />
                 <GenInfo />
@@ -21,7 +16,7 @@ class App extends Component {
                 <CvGenerated />
             </div>
         )
-    }
+    
 }
 
 export default App;

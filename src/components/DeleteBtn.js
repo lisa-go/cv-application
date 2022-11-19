@@ -1,15 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 
-class DeleteBtn extends Component {
-  constructor() {
-    super()
-  }
-
-  render() {
+function DeleteBtn () {
     return (
         <button>Delete</button>
     )
-  }
+  
 }
 
 export default DeleteBtn;

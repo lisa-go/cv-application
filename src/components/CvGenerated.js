@@ -1,20 +1,13 @@
-import React, { Component } from "react";
-import GenInfo from "./GenInfo";
+import React from "react";
 
-class CvGenerated extends Component {
-  constructor() {
-    super()
-  }
+function CvGenerated () {
 
-  
-
-  render() {
     return (
         <div id="CV">
-            <div className="CVname">fullname</div>
+            <div className="CVname">this.state.fullname</div>
         </div>
     )
-  }
+  
 }
 
 export default CvGenerated;

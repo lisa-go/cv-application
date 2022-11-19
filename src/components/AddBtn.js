@@ -1,15 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 
-class AddBtn extends Component {
-  constructor() {
-    super()
-  }
+function AddBtn () {
 
-  render() {
     return (
         <button>Add</button>
     )
-  }
+  
 }
 
 export default AddBtn;
