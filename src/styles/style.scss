@@ -1,9 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-
-$background: pink;
-$c1: white;
-$c2: grey;
-$main-font: 'Ubuntu', sans-serif;
+@import 'variables.scss', 'form.scss', 'cv.scss';
 
 * {
     padding: 0;
@@ -34,65 +29,4 @@ body {
 #content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
-
-#form {
-    grid-template-columns: 1 / 2;
-}
-
-.part {
-    display: grid;
-    justify-content: end;
-}
-
-h1 {
-    margin: 2rem 3rem 0;
-    font-size: 1.7rem;
-}
-
-section {
-    width: min-content;
-    border: 2px solid $c1;
-    border-radius: 1rem;
-    padding: 1rem;
-    margin: 0 1rem; 
-}
-
-.field {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 0.5rem;
-}
-
-input {
-    width: 20rem;
-}
-
-textarea {
-    width: 20rem;
-    height: 10rem;
-    resize: none;
-}
-
-#sworkcur, #seducom {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 30px;
-    margin-bottom: 0.5rem;
-
-    label {
-        width: fit-content;
-    }
-
-    input {
-        width: 25px;
-        grid-column: 2 / 3;
-    }
-}
-
-#CV {
-    margin-top: 1rem;
-    background-color: $c2;
-    grid-row: 1 / 4;
-    grid-column: 2 / 3;
 }

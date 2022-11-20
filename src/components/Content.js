@@ -9,7 +9,10 @@ function Content () {
         photo: '',
         fullname: '',
         email: '',
-        phone: ''
+        phone: '',
+        address: '',
+        introduction: '',
+        skills: ''
     })
 
     const [eduInfo, setEduInfo] = useState({
@@ -19,7 +22,7 @@ function Content () {
         edumaj: '',
         edusdate: '',
         eduedate: '',
-        educom: 'No'
+        educom: ''
     })
 
     const [workInfo, setWorkInfo] = useState({
@@ -28,7 +31,7 @@ function Content () {
         workmt: '',
         worksdate: '',
         workedate: '',
-        workcur: 'No'
+        workcur: ''
     })
     
       const handleChangeGen = event => {

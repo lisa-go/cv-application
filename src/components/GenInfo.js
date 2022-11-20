@@ -30,6 +30,25 @@ function GenInfo ({ handleChange, genInfo }) {
             <input type="tel" id="phone" 
               value={genInfo.phone} onChange={handleChange}></input>
           </div>
+
+          <div className="field" id="saddress">
+            <label htmlFor="address">Address</label>
+            <input type="tel" id="address" 
+              value={genInfo.address} onChange={handleChange}></input>
+          </div>
+
+          <div className="field" id="sintroduction">
+            <label htmlFor="introduction">Introduction</label>
+            <input type="tel" id="introduction" 
+              value={genInfo.introduction} onChange={handleChange}></input>
+          </div>
+
+          <div className="field" id="sskills">
+            <label htmlFor="skills">Skills</label>
+            <input type="tel" id="skills" 
+              value={genInfo.skills} onChange={handleChange}></input>
+          </div>
+
         </section>
 
       </div>
