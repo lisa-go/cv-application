@@ -1,20 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-function GenInfo (props) { 
-  const [genInfo, setGenInfo] = useState({
-    photo: '',
-    fullname: '',
-    email: '',
-    phone: ''
-  })
-
-  const handleChange = event => {
-    const field = event.target.id;
-    const value = event.target.value;
-    setGenInfo(values => ({...values, [field]: value}));
-    props.onChange(genInfo);
-  }
-
+function GenInfo ({ handleChange, genInfo }) { 
     return (
       <div className="part">
         <h1>General Information</h1>
