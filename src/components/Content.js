@@ -34,23 +34,23 @@ function Content () {
         workcur: ''
     })
     
-      const handleChangeGen = event => {
-        const field = event.target.id;
-        const value = event.target.value;
-        setGenInfo(values => ({...values, [field]: value}));
-      }
+    const handleChangeGen = event => {
+      const field = event.target.id;
+      const value = event.target.value;
+      setGenInfo(values => ({...values, [field]: value}));
+    }
 
-      const handleChangeEdu = event => {
-        const field = event.target.id;
-        const value = event.target.value;
-        setEduInfo(values => ({...values, [field]: value}));
-      }
+    const handleChangeEdu = event => {
+      const field = event.target.id;
+      const value = event.target.value;
+      setEduInfo(values => ({...values, [field]: value}));
+    }
 
-      const handleChangeWork = event => {
-        const field = event.target.id;
-        const value = event.target.value;
-        setWorkInfo(values => ({...values, [field]: value}));
-      }
+    const handleChangeWork = event => {
+      const field = event.target.id;
+      const value = event.target.value;
+      setWorkInfo(values => ({...values, [field]: value}));
+    }
 
     return (
             <div id="content">

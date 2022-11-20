@@ -3,6 +3,8 @@
     margin-top: 1rem;
     background-color: $c1;
     border-radius: 1rem;
+    width: clamp(50vw, 70%, 700px);
+    min-height: 90vh;
     grid-row: 1 / 4;
     grid-column: 2 / 3;
     display: grid;

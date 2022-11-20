@@ -3,6 +3,7 @@
 * {
     padding: 0;
     margin: 0;
+    word-break: break-all;
 }
 
 body {
@@ -27,6 +28,9 @@ body {
 }
 
 #content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
 }
