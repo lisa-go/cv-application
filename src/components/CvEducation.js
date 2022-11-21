@@ -1,19 +1,20 @@
 import React from "react";
 
-function CvEducation ({ eduInfo }) {
+function CvEducation ({ eduInfo, edu }) {
     
     
     return (
         <div className="CVedu">
-            <div className="EduName">{eduInfo.eduname}</div>
+
+            <div className="EduName">{edu.eduname}</div>
             <div className="EduDate">
-                <div className="EduSdate">{eduInfo.edusdate} to</div>
-                <div className="EduEdate">{eduInfo.eduedate}</div>
+                <div className="EduSdate">{edu.edusdate} to</div>
+                <div className="EduEdate">{edu.eduedate}</div>
              </div>
-             <div className="EduLoc">{eduInfo.eduloc}</div>
-            <div className="EduCom">{eduInfo.educom}</div>
-            <div className="EduDeg">{eduInfo.edudeg}</div>
-            <div className="EduMaj">{eduInfo.edumaj}</div>
+             <div className="EduLoc">{edu.eduloc}</div>
+            <div className="EduCom">{edu.educom}</div>
+            <div className="EduDeg">{edu.edudeg}</div>
+            <div className="EduMaj">{edu.edumaj}</div>
         </div>
 
     )

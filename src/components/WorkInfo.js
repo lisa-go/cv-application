@@ -1,6 +1,4 @@
 import React from "react";
-import AddBtn from "./AddBtn";
-import DeleteBtn from "./DeleteBtn";
 
 function WorkInfo ({ handleChange, workInfo }) {
 
@@ -44,8 +42,6 @@ function WorkInfo ({ handleChange, workInfo }) {
                         value={workInfo.workcur} onChange={handleChange}></input>
                 </div>
 
-                <AddBtn />
-                <DeleteBtn />
             </section>
         </div> 
     )
