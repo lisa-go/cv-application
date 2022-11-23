@@ -37,12 +37,6 @@ function WorkInfo ({ handleSubmit, register, onSubmit, workInfo }) {
                         {...register('workedate')} />
                 </div>
 
-                <div id="sworkcur">
-                    <label htmlFor="workcur">Are you currently still working here?</label>
-                    <input type="checkbox" id="workcur"
-                        {...register('workcur')} />
-                </div>
-
                 <button type="submit">Add</button>
             </form>
             </section>

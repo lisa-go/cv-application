@@ -34,19 +34,3 @@
         }
     }
 }
-
-#sworkcur, #seducom {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 30px;
-    margin-bottom: 0.5rem;
-
-    label {
-        width: fit-content;
-    }
-
-    input {
-        width: 25px;
-        grid-column: 2 / 3;
-    }
-}

@@ -4,6 +4,7 @@ import EduInfo from "./EduInfo";
 import WorkInfo from "./WorkInfo";
 import GenInfo from "./GenInfo";
 import CvGenerated from "./CvGenerated";
+import { v4 as uuidv4 } from 'uuid'; 
 
 function Content () {
     const [genInfo, setGenInfo] = useState({
@@ -22,7 +23,8 @@ function Content () {
         edudeg: 'cs',
         edumaj: 'programming',
         edusdate: '2010-06',
-        eduedate: '2013-06'
+        eduedate: '2013-06',
+        eduid: uuidv4()
     }])
 
     const [workInfo, setWorkInfo] = useState([{
@@ -31,7 +33,7 @@ function Content () {
         workmt: 'Program things',
         worksdate: '2013-10',
         workedate: '2014-06',
-        workcur: 'false'
+        workid: uuidv4()
     }])
     
     const handleChangeGen = event => {
@@ -50,7 +52,8 @@ function Content () {
         edudeg: data.edudeg,
         edumaj: data.edumaj,
         edusdate: data.edusdate,
-        eduedate: data.eduedate 
+        eduedate: data.eduedate,
+        eduid: uuidv4()
       }]);
       console.log(eduInfo)
     }
@@ -67,7 +70,7 @@ function Content () {
         workmt: wdata.workmt,
         worksdate: wdata.worksdate,
         workedate: wdata.workedate,
-        workcur: wdata.workcur
+        workid: uuidv4()
       }]);
       console.log(workInfo)
     }
