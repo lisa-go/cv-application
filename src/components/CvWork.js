@@ -1,18 +1,18 @@
 import React from "react";
 
-function CvWork ({ workInfo }) {
+function CvWork ({ wrk }) {
     
     
     return (
         <div className="CVwork">
-            <div className="WorkName">{workInfo.workname}</div>
+            <div className="WorkName">{wrk.workname}</div>
             <div className="WorkDate">
-                <div className="WorkSdate">{workInfo.worksdate} to</div>
-                <div className="WorkEdate">{workInfo.workedate}</div>
+                <div className="WorkSdate">{wrk.worksdate} to</div>
+                <div className="WorkEdate">{wrk.workedate}</div>
             </div>
-            <div className="WorkPos">{workInfo.workpos}</div>
-            <div className="WorkCur">{workInfo.workcur}</div>
-            <div className="WorkMt">{workInfo.workmt}</div>
+            <div className="WorkPos">{wrk.workpos}</div>
+            <div className="WorkCur">{wrk.workcur}</div>
+            <div className="WorkMt">{wrk.workmt}</div>
         </div>
     )
   

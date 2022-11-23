@@ -25,14 +25,14 @@ function Content () {
         eduedate: '2013-06'
     }])
 
-    const [workInfo, setWorkInfo] = useState({
-        workname: '',
-        workpos: '',
-        workmt: '',
-        worksdate: '',
-        workedate: '',
-        workcur: ''
-    })
+    const [workInfo, setWorkInfo] = useState([{
+        workname: 'Google',
+        workpos: 'Programmer',
+        workmt: 'Program things',
+        worksdate: '2013-10',
+        workedate: '2014-06',
+        workcur: 'false'
+    }])
     
     const handleChangeGen = event => {
       const field = event.target.id;
@@ -40,15 +40,9 @@ function Content () {
       setGenInfo(values => ({...values, [field]: value}));
     }
 
-    const handleChangeWork = event => {
-      const field = event.target.id;
-      const value = event.target.value;
-      setWorkInfo(values => ({...values, [field]: value}));
-    }
-
     const {register, handleSubmit} = useForm();
 
-    const onSubmit = (data) => {
+    const onSubmitEdu = (data) => {
       console.log(data);
       setEduInfo([...eduInfo, {
         eduname: data.eduname, 
@@ -61,12 +55,30 @@ function Content () {
       console.log(eduInfo)
     }
 
+    const {
+      register: register2,
+      handleSubmit: handleSubmit2,} = useForm();
+
+    const onSubmitWork = (wdata) => {
+      console.log(wdata);
+      setWorkInfo([...workInfo, {
+        workname: wdata.workname,
+        workpos: wdata.workpos,
+        workmt: wdata.workmt,
+        worksdate: wdata.worksdate,
+        workedate: wdata.workedate,
+        workcur: wdata.workcur
+      }]);
+      console.log(workInfo)
+    }
+
+
     return (
             <div id="content">
                 <div id="form">
                     <GenInfo handleChange={handleChangeGen} genInfo={genInfo} />
-                    <EduInfo eduInfo={eduInfo} handleSubmit={handleSubmit} register={register} onSubmit={onSubmit} />
-                    <WorkInfo handleChange={handleChangeWork} workInfo={workInfo} />
+                    <EduInfo eduInfo={eduInfo} handleSubmit={handleSubmit} register={register} onSubmit={onSubmitEdu} />
+                    <WorkInfo workInfo={workInfo} handleSubmit={handleSubmit2} register={register2} onSubmit={onSubmitWork} />
                 </div>
                 <CvGenerated genInfo={genInfo} eduInfo={eduInfo} workInfo={workInfo} />
             </div>

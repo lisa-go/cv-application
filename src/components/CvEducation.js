@@ -1,11 +1,10 @@
 import React from "react";
 
-function CvEducation ({ eduInfo, edu }) {
+function CvEducation ({ edu }) {
     
     
     return (
         <div className="CVedu">
-
             <div className="EduName">{edu.eduname}</div>
             <div className="EduDate">
                 <div className="EduSdate">{edu.edusdate} to</div>

@@ -11,11 +11,16 @@ function CvGenerated ({ genInfo, eduInfo, workInfo }) {
             
             {eduInfo.map(edu => {
                 return (
-                   <CvEducation eduInfo={eduInfo} edu={edu} /> 
+                   <CvEducation edu={edu} /> 
                 )
             })}
             
-            <CvWork workInfo={workInfo} />
+            {workInfo.map(wrk => {
+                return (
+                    <CvWork wrk={wrk} />
+                )
+            })}
+            
         </div>
     )
   
