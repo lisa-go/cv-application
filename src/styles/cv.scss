@@ -39,6 +39,19 @@
             color: $c1;
             background-color: $c2;
         }
+
+        ul {
+            li {
+
+                button {
+                    display: var(--rmBtn)
+                }
+
+                &:hover {
+                    --rmBtn: flex;
+                }
+            }
+        }
     }
 
     .CVedu {

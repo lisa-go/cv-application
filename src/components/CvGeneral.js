@@ -1,14 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
+import DeleteBtn from "./DeleteBtn";
 
-function CvGeneral ({ genInfo }) {
-    
+function CvGeneral ({ genInfo, skill, removeElement }) {
+
+    const [isHovering, setIsHovering] = useState(false);
+    const handleMouseOver = () => {
+    setIsHovering(true);
+    };
+    const handleMouseOut = () => {
+    setIsHovering(false);
+    };
     
     return (
         <div className="CVgen">
             <div className="GenPhoto">{genInfo.photo}</div>
             <div className="GenName">{genInfo.fullname}</div>
             <div className="GenIntro">{genInfo.introduction}</div>
-            <div className="GenSkills">{genInfo.skills}</div>
+
+            <ul>
+            {skill.map(sk => {
+                if (sk.show === true) {
+                return (
+                    <li key={sk.skid} onMouseOver={handleMouseOver} 
+                    onMouseOut={handleMouseOut} >{sk.skill}
+                    
+                    {isHovering && (
+                        <DeleteBtn id={sk.skid} sk={sk} removeElement={removeElement} />
+                )}
+                    </li>
+                )
+                }
+            })}        
+            </ul>
+
             <div className="GenPhone">{genInfo.phone}</div>
             <div className="GenEmail">{genInfo.email}</div>
             <div className="GenAddress">{genInfo.address}</div>

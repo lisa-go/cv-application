@@ -5,7 +5,7 @@ function CvWork ({ wrk, isHovering, handleMouseOver, handleMouseOut, removeEleme
     
     
     return (
-        <div className="CVwork" id={wrk.workid} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} >
+        <div className="CVwork" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} >
             <div className="WorkName">{wrk.workname}</div>
             <div className="WorkDate">
                 <div className="WorkSdate">{wrk.worksdate} to</div>
@@ -16,7 +16,7 @@ function CvWork ({ wrk, isHovering, handleMouseOver, handleMouseOut, removeEleme
             <div className="WorkMt">{wrk.workmt}</div>
 
             {isHovering && (
-                <DeleteBtn divid={wrk.workid} wrk={wrk} removeElement={removeElement2} />
+                <DeleteBtn id={wrk.workid} wrk={wrk} removeElement={removeElement2} />
         )}
 
         </div>

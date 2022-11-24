@@ -13,9 +13,14 @@ function Content () {
         email: '',
         phone: '',
         address: '',
-        introduction: '',
-        skills: ''
+        introduction: ''
     })
+
+    const [skill, setSkill] = useState([{
+        skill: 'My skills',
+        skid: uuidv4(),
+        show: true
+    }])
 
     const [eduInfo, setEduInfo] = useState([{
         eduname: 'harvard',
@@ -79,9 +84,23 @@ function Content () {
       console.log(workInfo)
     }
 
-    const removeElement = (divid) => {
+    const {
+      register: register3,
+      handleSubmit: handleSubmit3,} = useForm();
+
+    const onSubmitSkill = (sdata) => {
+      console.log(sdata);
+      setSkill([...skill, {
+        skill: sdata.skill,
+        skid: uuidv4(),
+        show: true
+      }]);
+      console.log(skill)
+    }
+
+    const removeElement = (id) => {
       const updateElements = eduInfo.map((edu) => {
-        if (divid === edu.eduid) {
+        if (id === edu.eduid) {
           return {...edu, show: false};
         }
         return edu;
@@ -89,9 +108,9 @@ function Content () {
       setEduInfo(updateElements);
     }
 
-    const removeElement2 = (divid) => {
+    const removeElement2 = (id) => {
       const updateElements = workInfo.map((wrk) => {
-        if (divid === wrk.workid) {
+        if (id === wrk.workid) {
           return {...wrk, show: false};
         }
         return wrk;
@@ -99,14 +118,32 @@ function Content () {
       setWorkInfo(updateElements);
     }
 
+    const removeElement3 = (id) => {
+      const updateElements = skill.map((sk) => {
+        if (id === sk.skid) {
+          return {...sk, show: false};
+        }
+        return sk;
+      });
+      setSkill(updateElements);
+    }
+
     return (
             <div id="content">
                 <div id="form">
-                    <GenInfo handleChange={handleChangeGen} genInfo={genInfo} />
-                    <EduInfo eduInfo={eduInfo} handleSubmit={handleSubmit} register={register} onSubmit={onSubmitEdu} />
-                    <WorkInfo workInfo={workInfo} handleSubmit={handleSubmit2} register={register2} onSubmit={onSubmitWork} />
+                    <GenInfo handleChange={handleChangeGen} genInfo={genInfo} 
+                      handleSubmit={handleSubmit3} register={register3} 
+                      onSubmit={onSubmitSkill} />
+
+                    <EduInfo eduInfo={eduInfo} handleSubmit={handleSubmit} 
+                      register={register} onSubmit={onSubmitEdu} />
+
+                    <WorkInfo workInfo={workInfo} handleSubmit={handleSubmit2} 
+                      register={register2} onSubmit={onSubmitWork} />
                 </div>
-                <CvGenerated genInfo={genInfo} eduInfo={eduInfo} workInfo={workInfo} removeElement={removeElement} removeElement2={removeElement2} />
+                <CvGenerated genInfo={genInfo} skill={skill} eduInfo={eduInfo} 
+                  workInfo={workInfo} removeElement={removeElement} 
+                  removeElement2={removeElement2} removeElement3={removeElement3}/>
             </div>
         )
     

@@ -4,7 +4,7 @@ import DeleteBtn from "./DeleteBtn";
 function CvEducation ({ edu, isHovering, handleMouseOver, handleMouseOut, removeElement }) {
     
     return (
-        <div className="CVedu" id={edu.eduid} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} >
+        <div className="CVedu" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} >
             <div className="EduName">{edu.eduname}</div>
             <div className="EduDate">
                 <div className="EduSdate">{edu.edusdate} to</div>
@@ -16,7 +16,7 @@ function CvEducation ({ edu, isHovering, handleMouseOver, handleMouseOut, remove
             <div className="EduMaj">{edu.edumaj}</div>
 
             {isHovering && (
-                <DeleteBtn divid={edu.eduid} edu={edu} removeElement={removeElement} />
+                <DeleteBtn id={edu.eduid} edu={edu} removeElement={removeElement} />
         )}
 
         </div>

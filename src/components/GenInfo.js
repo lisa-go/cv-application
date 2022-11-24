@@ -1,6 +1,6 @@
 import React from "react";
 
-function GenInfo ({ handleChange, genInfo }) { 
+function GenInfo ({ handleChange, genInfo, handleSubmit, register, onSubmit }) { 
     return (
       <div className="part">
         <h1>General Information</h1>
@@ -43,12 +43,14 @@ function GenInfo ({ handleChange, genInfo }) {
               value={genInfo.introduction} onChange={handleChange}></input>
           </div>
 
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className="field" id="sskills">
             <label htmlFor="skills">Skills</label>
             <input type="tel" id="skills" 
-              value={genInfo.skills} onChange={handleChange}></input>
+              {...register('skill')}></input>
           </div>
-
+          <button type="submit">Add Skill</button>
+        </form>
         </section>
 
       </div>
