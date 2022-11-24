@@ -24,7 +24,8 @@ function Content () {
         edumaj: 'programming',
         edusdate: '2010-06',
         eduedate: '2013-06',
-        eduid: uuidv4()
+        eduid: uuidv4(),
+        show: true
     }])
 
     const [workInfo, setWorkInfo] = useState([{
@@ -33,7 +34,8 @@ function Content () {
         workmt: 'Program things',
         worksdate: '2013-10',
         workedate: '2014-06',
-        workid: uuidv4()
+        workid: uuidv4(),
+        show: true
     }])
     
     const handleChangeGen = event => {
@@ -53,7 +55,8 @@ function Content () {
         edumaj: data.edumaj,
         edusdate: data.edusdate,
         eduedate: data.eduedate,
-        eduid: uuidv4()
+        eduid: uuidv4(),
+        show: true
       }]);
       console.log(eduInfo)
     }
@@ -70,11 +73,31 @@ function Content () {
         workmt: wdata.workmt,
         worksdate: wdata.worksdate,
         workedate: wdata.workedate,
-        workid: uuidv4()
+        workid: uuidv4(),
+        show: true
       }]);
       console.log(workInfo)
     }
 
+    const removeElement = (divid) => {
+      const updateElements = eduInfo.map((edu) => {
+        if (divid === edu.eduid) {
+          return {...edu, show: false};
+        }
+        return edu;
+      });
+      setEduInfo(updateElements);
+    }
+
+    const removeElement2 = (divid) => {
+      const updateElements = workInfo.map((wrk) => {
+        if (divid === wrk.workid) {
+          return {...wrk, show: false};
+        }
+        return wrk;
+      });
+      setWorkInfo(updateElements);
+    }
 
     return (
             <div id="content">
@@ -83,7 +106,7 @@ function Content () {
                     <EduInfo eduInfo={eduInfo} handleSubmit={handleSubmit} register={register} onSubmit={onSubmitEdu} />
                     <WorkInfo workInfo={workInfo} handleSubmit={handleSubmit2} register={register2} onSubmit={onSubmitWork} />
                 </div>
-                <CvGenerated genInfo={genInfo} eduInfo={eduInfo} workInfo={workInfo} />
+                <CvGenerated genInfo={genInfo} eduInfo={eduInfo} workInfo={workInfo} removeElement={removeElement} removeElement2={removeElement2} />
             </div>
         )
     

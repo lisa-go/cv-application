@@ -1,8 +1,10 @@
 import React from "react";
 
-function DeleteBtn () {
+function DeleteBtn ({ divid, removeElement }) {
+
+
     return (
-        <button>Delete</button>
+        <button onClick={() => removeElement(divid)}>Delete</button>
     )
   
 }

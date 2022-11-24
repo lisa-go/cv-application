@@ -1,3 +1,8 @@
+
+:root {
+    --rmBtn: none;
+}
+
 #CV {
     padding: 6rem 4rem;
     margin-top: 1rem;
@@ -42,6 +47,13 @@
         display: grid;
         grid-template-columns: 1.5fr 1fr;
         margin-left: 1rem;
+        button {
+            display: var(--rmBtn)
+        }
+        
+        &:hover {
+            --rmBtn: flex;
+        }
 
         .EduName {
             font-size: 1.4rem;
