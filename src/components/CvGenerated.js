@@ -3,7 +3,7 @@ import CvEducation from "./CvEducation";
 import CvGeneral from "./CvGeneral";
 import CvWork from "./CvWork";
 
-function CvGenerated ({ genInfo, skill, eduInfo, workInfo, removeElement, removeElement2, removeElement3 }) {
+function CvGenerated ({ genInfo, skill, eduInfo, workInfo, removeElement, removeElement2, removeElement3, file }) {
 
     const [isHovering, setIsHovering] = useState(false);
         const handleMouseOver = () => {
@@ -23,7 +23,7 @@ function CvGenerated ({ genInfo, skill, eduInfo, workInfo, removeElement, remove
 
     return (
         <div id="CV">
-            <CvGeneral genInfo={genInfo} skill={skill} removeElement={removeElement3} />
+            <CvGeneral file={file} genInfo={genInfo} skill={skill} removeElement={removeElement3} />
             
             <div className="title1">Education</div>
             {eduInfo.map(edu => {

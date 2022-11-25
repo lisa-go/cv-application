@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import DeleteBtn from "./DeleteBtn";
 
-function CvGeneral ({ genInfo, skill, removeElement }) {
+function CvGeneral ({ genInfo, skill, removeElement, file }) {
 
     const [isHovering, setIsHovering] = useState(false);
     const handleMouseOver = () => {
@@ -14,7 +14,7 @@ function CvGeneral ({ genInfo, skill, removeElement }) {
     return (
         <div className="CVgen">
             <div className="photoCont">
-                <div className="GenPhoto">{genInfo.photo}</div>
+                <img src={file} id="GenPhoto" />
             </div>
             <div className="GenName">{genInfo.fullname}</div>
 

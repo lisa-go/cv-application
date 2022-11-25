@@ -1,7 +1,7 @@
 import React from "react";
 
-function GenInfo ({ handleChange, genInfo, handleSubmit, register, onSubmit }) { 
-    return (
+function GenInfo ({ handleChange, genInfo, handleSubmit, register, onSubmit, handleFile }) {   
+  return (
       <div className="part">
         <h1>General Information</h1>
         <section>
@@ -9,7 +9,7 @@ function GenInfo ({ handleChange, genInfo, handleSubmit, register, onSubmit }) {
             <label htmlFor="photo">Photo</label>
             <input type="file" id="photo" name="photo" 
                   accept="image/png, image/jpeg" 
-                  value={genInfo.photo} onChange={handleChange}></input>
+                  onChange={handleFile}></input>
           </div>
 
           <div className="field">

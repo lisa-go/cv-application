@@ -27,9 +27,10 @@
             align-items: center;
             justify-content: center;
         
-            .GenPhoto {
+            #GenPhoto {
                 width: 150px;
                 height: 150px;
+                object-fit: contain;
                 border-radius: 75px;
                 background-color: $c2;
             }

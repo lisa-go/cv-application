@@ -8,7 +8,6 @@ import { v4 as uuidv4 } from 'uuid';
 
 function Content () {
     const [genInfo, setGenInfo] = useState({
-        photo: '',
         fullname: 'Jane Doe',
         email: 'janedoe@example.com',
         phone: '0123456789',
@@ -128,22 +127,45 @@ function Content () {
       setSkill(updateElements);
     }
 
+    const [file, setFile] = useState();
+    const handleFile = (e) => {
+      console.log(e.target.files);
+      setFile(URL.createObjectURL(e.target.files[0]));
+    }
+
     return (
             <div id="content">
                 <div id="form">
-                    <GenInfo handleChange={handleChangeGen} genInfo={genInfo} 
-                      handleSubmit={handleSubmit3} register={register3} 
-                      onSubmit={onSubmitSkill} />
+                    <GenInfo 
+                      handleChange={handleChangeGen} 
+                      genInfo={genInfo} 
+                      handleSubmit={handleSubmit3} 
+                      register={register3} 
+                      onSubmit={onSubmitSkill} 
+                      handleFile={handleFile} />
 
-                    <EduInfo eduInfo={eduInfo} handleSubmit={handleSubmit} 
-                      register={register} onSubmit={onSubmitEdu} />
+                    <EduInfo 
+                      eduInfo={eduInfo} 
+                      handleSubmit={handleSubmit} 
+                      register={register} 
+                      onSubmit={onSubmitEdu} />
 
-                    <WorkInfo workInfo={workInfo} handleSubmit={handleSubmit2} 
-                      register={register2} onSubmit={onSubmitWork} />
+                    <WorkInfo 
+                      workInfo={workInfo} 
+                      handleSubmit={handleSubmit2} 
+                      register={register2} 
+                      onSubmit={onSubmitWork} />
                 </div>
-                <CvGenerated genInfo={genInfo} skill={skill} eduInfo={eduInfo} 
-                  workInfo={workInfo} removeElement={removeElement} 
-                  removeElement2={removeElement2} removeElement3={removeElement3}/>
+
+                <CvGenerated 
+                  genInfo={genInfo} 
+                  skill={skill} 
+                  eduInfo={eduInfo} 
+                  workInfo={workInfo} 
+                  removeElement={removeElement} 
+                  removeElement2={removeElement2} 
+                  removeElement3={removeElement3} 
+                  file={file} />
             </div>
         )
     
