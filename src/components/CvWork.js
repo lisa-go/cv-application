@@ -1,9 +1,7 @@
 import React from "react";
 import DeleteBtn from "./DeleteBtn";
 
-function CvWork ({ wrk, isHovering, handleMouseOver, handleMouseOut, removeElement2 }) {
-    
-    
+export default function CvWork({ wrk, isHovering, handleMouseOver, handleMouseOut, removeElement2 }) {
     return (
         <div className="CVwork" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} >
             <div className="WorkName">{wrk.workname}</div>
@@ -16,11 +14,8 @@ function CvWork ({ wrk, isHovering, handleMouseOver, handleMouseOut, removeEleme
 
             {isHovering && (
                 <DeleteBtn id={wrk.workid} wrk={wrk} removeElement={removeElement2} />
-        )}
+            )}
 
         </div>
     )
-  
 }
-
-export default CvWork;

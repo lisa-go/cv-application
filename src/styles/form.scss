@@ -3,20 +3,20 @@
 }
 
 .part {
-    
+
 
     h1 {
         margin: 2rem 3rem 0;
         font-size: 1.7rem;
     }
-    
+
     section {
         width: min-content;
-        border: 1px solid $c1;
-        background-color: $c2;
+        background-color: transparentize($c2, 0.6);
+        box-shadow: 0 5px 10px white;
         border-radius: 1rem;
         padding: 1rem;
-        margin: 0 1rem; 
+        margin: 0 1rem;
 
         .field {
             display: flex;
@@ -36,7 +36,7 @@
                 border: none;
                 border-radius: 5px;
             }
-            
+
             textarea {
                 width: 18rem;
                 height: 10rem;
