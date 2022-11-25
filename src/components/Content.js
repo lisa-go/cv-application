@@ -9,11 +9,11 @@ import { v4 as uuidv4 } from 'uuid';
 function Content () {
     const [genInfo, setGenInfo] = useState({
         photo: '',
-        fullname: '',
-        email: '',
-        phone: '',
-        address: '',
-        introduction: ''
+        fullname: 'Jane Doe',
+        email: 'janedoe@example.com',
+        phone: '0123456789',
+        address: '123 Example Street',
+        introduction: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur sit expedita sint recusandae, doloribus nisi, numquam ut voluptates quae nihil aliquam esse perspiciatis repudiandae voluptatibus maiores inventore. Sunt, cupiditate ex!'
     })
 
     const [skill, setSkill] = useState([{
@@ -23,10 +23,10 @@ function Content () {
     }])
 
     const [eduInfo, setEduInfo] = useState([{
-        eduname: 'harvard',
-        eduloc: 'state',
-        edudeg: 'cs',
-        edumaj: 'programming',
+        eduname: 'Harvard University',
+        eduloc: 'Massachusetts',
+        edudeg: 'Bachelor of Computer Sciences',
+        edumaj: 'Programming',
         edusdate: '2010-06',
         eduedate: '2013-06',
         eduid: uuidv4(),
@@ -35,7 +35,7 @@ function Content () {
 
     const [workInfo, setWorkInfo] = useState([{
         workname: 'Google',
-        workpos: 'Programmer',
+        workpos: 'Full Stack Developer',
         workmt: 'Program things',
         worksdate: '2013-10',
         workedate: '2014-06',

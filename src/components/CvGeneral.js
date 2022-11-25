@@ -13,10 +13,16 @@ function CvGeneral ({ genInfo, skill, removeElement }) {
     
     return (
         <div className="CVgen">
-            <div className="GenPhoto">{genInfo.photo}</div>
+            <div className="photoCont">
+                <div className="GenPhoto">{genInfo.photo}</div>
+            </div>
             <div className="GenName">{genInfo.fullname}</div>
-            <div className="GenIntro">{genInfo.introduction}</div>
 
+            <div className="header">Introduction</div>
+            <div className="GenIntro">{genInfo.introduction}</div>
+            <br />
+
+            <div className="header">Skills</div>
             <ul>
             {skill.map(sk => {
                 if (sk.show === true) {
@@ -32,7 +38,9 @@ function CvGeneral ({ genInfo, skill, removeElement }) {
                 }
             })}        
             </ul>
+            <br />
 
+            <div className="header">Contact Details</div>
             <div className="GenPhone">{genInfo.phone}</div>
             <div className="GenEmail">{genInfo.email}</div>
             <div className="GenAddress">{genInfo.address}</div>

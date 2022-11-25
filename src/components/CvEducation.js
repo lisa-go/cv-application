@@ -10,8 +10,7 @@ function CvEducation ({ edu, isHovering, handleMouseOver, handleMouseOut, remove
                 <div className="EduSdate">{edu.edusdate} to</div>
                 <div className="EduEdate">{edu.eduedate}</div>
              </div>
-             <div className="EduLoc">{edu.eduloc}</div>
-            <div className="EduCom">{edu.educom}</div>
+            <div className="EduLoc">{edu.eduloc}</div>
             <div className="EduDeg">{edu.edudeg}</div>
             <div className="EduMaj">{edu.edumaj}</div>
 

@@ -12,7 +12,8 @@
     
     section {
         width: min-content;
-        border: 2px solid $c1;
+        border: 1px solid $c1;
+        background-color: $c2;
         border-radius: 1rem;
         padding: 1rem;
         margin: 0 1rem; 
@@ -22,14 +23,47 @@
             flex-direction: column;
             margin-bottom: 0.5rem;
 
+            label {
+                padding-left: 0.5rem;
+                padding-bottom: 3px;
+            }
+
             input {
-                width: 20rem;
+                font-family: $main-font;
+                font-size: 0.9rem;
+                width: 18rem;
+                padding: 3px 6px;
+                border: none;
+                border-radius: 5px;
             }
             
             textarea {
-                width: 20rem;
+                width: 18rem;
                 height: 10rem;
+                padding: 3px 6px;
                 resize: none;
+                border: none;
+                border-radius: 5px;
+            }
+
+            input::file-selector-button {
+                @extend button;
+            }
+        }
+
+        button {
+            cursor: pointer;
+            padding: 5px 10px;
+            font-family: $main-font;
+            font-size: 0.9rem;
+            border-radius: 1rem;
+            border: none;
+            background-color: $c5;
+
+            &:hover {
+                background-color: $c4;
+                border: 1px solid grey;
+                transition: 1s;
             }
         }
     }

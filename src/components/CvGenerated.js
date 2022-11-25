@@ -25,6 +25,7 @@ function CvGenerated ({ genInfo, skill, eduInfo, workInfo, removeElement, remove
         <div id="CV">
             <CvGeneral genInfo={genInfo} skill={skill} removeElement={removeElement3} />
             
+            <div className="title1">Education</div>
             {eduInfo.map(edu => {
                 if (edu.show === true) {
                 return (
@@ -35,6 +36,7 @@ function CvGenerated ({ genInfo, skill, eduInfo, workInfo, removeElement, remove
                 }
             })}
             
+            <div className="title2">Work Experience</div>
             {workInfo.map(wrk => {
                 if (wrk.show === true) {
                 return (

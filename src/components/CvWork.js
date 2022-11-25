@@ -12,7 +12,6 @@ function CvWork ({ wrk, isHovering, handleMouseOver, handleMouseOut, removeEleme
                 <div className="WorkEdate">{wrk.workedate}</div>
             </div>
             <div className="WorkPos">{wrk.workpos}</div>
-            <div className="WorkCur">{wrk.workcur}</div>
             <div className="WorkMt">{wrk.workmt}</div>
 
             {isHovering && (
